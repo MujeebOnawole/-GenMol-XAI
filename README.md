@@ -315,9 +315,9 @@ Tier 3 actives cluster at SA scores 3-4 (p<0.0001), indicating optimal synthetic
 
 ```bibtex
 @article{xai_fbdd_antimicrobial,
-  title={Computational Validation of XAI-Derived Fragments for Antimicrobial Drug Design},
-  author={[Author Names]},
-  journal={Journal of Chemical Information and Modeling},
+  title={TBD},
+  author={Onawole, Abdulmujeeb T; Blaskovich, Mark A.T.; Zuegg, Johannes},
+  journal={TBD},
   year={2025},
   note={Paper 3: Fragment recombination validation}
 }
