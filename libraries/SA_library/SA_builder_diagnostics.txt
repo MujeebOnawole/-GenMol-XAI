@@ -1,0 +1,16 @@
+Safe Library Builder Diagnostics: SA
+Generated: 2025-12-06T05:48:12.813896
+
+Source File Diagnostics:
+Source=../fragments_analysis/POSITIVE/SA_specific_positive_scaffolds.csv: pre_rows=1986 post_canonical=1986 | acid(native=0, carboxylate=0, latent_ester=0) | amine(primary=0, secondary=1032, protonated=0) | roles(scaffold=1986, substituent=0)
+Source=../fragments_analysis/POSITIVE/SA_specific_positive_substitutents.csv: pre_rows=346 post_canonical=346 | acid(native=0, carboxylate=1, latent_ester=30) | amine(primary=91, secondary=74, protonated=0) | roles(scaffold=0, substituent=346)
+
+============================================================
+SAFE LIBRARY BUILD COMPLETE: SA
+============================================================
+Total fragments: 2332
+Output: C:\Users\uqaonawo\OneDrive - The University of Queensland\Desktop\Fragment_XAI_analysis\FBDD\SA\safe_library_SA.json
+
+Fragment sources:
+  - pathogen_specific: 2332
+============================================================
