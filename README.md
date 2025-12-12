@@ -24,6 +24,14 @@ This work is part of a thesis series on explainable AI for antimicrobial drug di
 | **EC** | 26 | 17.4% | EC | 70.0% |
 | **CA** | 8 | 5.2% | CA | 9.1% |
 
+**Hit Rate Definition**:  
+- **Hit Rate** = Overall hit rate across all 7 libraries combined (Total Tier 3 actives / Total Tier 3 compounds)
+- **Top Hit Rate** = Best-performing individual library for that pathogen model
+
+*Example*: For SA model, 68 of 171 total Tier 3 compounds were predicted active (39.8% overall), but the SA_CA library achieved 72.2% (26/36), demonstrating library-specific optimization.
+
+---
+
 - **Novelty**: 99.6% (697/700) of generated molecules are novel (not in training data)
 - **Linkage Diversity**: 600 amides (85.7%) + 100 ureas (14.3%) from oxazolidinone fragments
 - **Library-Specific Validation**: SA library achieves 58% SA hit rate vs 0% EC hit rate
