@@ -1,0 +1,5 @@
+Source=fragments_analysis/TRIPLE_ACTIVE_POSITIVE/elite_fragments_for_synthesis.csv: pre_rows=1974 post_canonical=1974 | acid(native=0, carboxylate=1, latent_ester=23) | amine(primary=106, secondary=817, protonated=0) | roles(scaffold=0, substituent=0)
+Source=fragments_analysis/TRIPLE_ACTIVE_POSITIVE/triple_active_fragments_with_properties.csv: pre_rows=2803 post_canonical=2803 | acid(native=0, carboxylate=1, latent_ester=27) | amine(primary=150, secondary=1007, protonated=0) | roles(scaffold=0, substituent=0)
+Source=fragments_analysis/TRIPLE_ACTIVE_POSITIVE/Multi_positive_scaffolds.csv: pre_rows=2096 post_canonical=2096 | acid(native=0, carboxylate=0, latent_ester=0) | amine(primary=0, secondary=943, protonated=0) | roles(scaffold=2096, substituent=0)
+Source=fragments_analysis/TRIPLE_ACTIVE_POSITIVE/Multi_positive_substituents.csv: pre_rows=707 post_canonical=707 | acid(native=0, carboxylate=1, latent_ester=27) | amine(primary=150, secondary=64, protonated=0) | roles(scaffold=0, substituent=707)
+Wrote 2803 fragments -> FBDD\TRIPLE\safe_library.json

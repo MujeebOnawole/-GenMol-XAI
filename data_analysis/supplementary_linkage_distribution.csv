@@ -1,0 +1,3 @@
+linkage_type,chemical_structure,count,percentage,source_electrophiles,route_classes
+Amide,R₁-CO-NH-R₂,600,85.7%,"Carboxylates, esters, lactones","A, B, C"
+Urea,R₁-NH-CO-NH-R₂,100,14.3%,Oxazolidinones only,C only

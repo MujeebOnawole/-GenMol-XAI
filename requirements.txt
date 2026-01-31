@@ -1,0 +1,14 @@
+# GenMol: XAI-Guided Fragment-Based Molecule Generation
+# Python 3.8+ required
+
+# Core dependencies
+rdkit>=2023.03.1
+pandas>=1.5.0
+numpy>=1.23.0
+
+# Optional: Statistical tests
+scipy>=1.10.0
+
+# Optional: Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0

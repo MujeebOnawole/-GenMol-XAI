@@ -1,0 +1,15 @@
+metric,value,percentage,notes
+total_fragments_available,5650,,Source fragments in SA_EC library (scaffolds + substituents)
+test_compounds_generated,100,,Compounds evaluated from SA_EC library
+SA_predicted_active,21,21.0,All scenarios combined
+EC_predicted_active,9,9.0,All scenarios combined
+dual_active_SA_and_EC,4,4.0,Active against both pathogens
+SA_only_active,17,17.0,Active against SA but not EC
+EC_only_active,5,5.0,Active against EC but not SA
+inactive_both,74,74.0,Inactive against both pathogens
+SA_tier3_compounds,22,22.0,High agreement + high reliability
+SA_tier3_actives,2,9.1,Tier 3 hit rate for SA model
+EC_tier3_compounds,30,30.0,High agreement + high reliability
+EC_tier3_actives,1,3.3,Tier 3 hit rate for EC model
+CA_tier3_compounds,29,29.0,High agreement + high reliability
+CA_tier3_actives,2,6.9,Tier 3 hit rate for CA model

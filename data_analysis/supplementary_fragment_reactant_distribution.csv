@@ -1,0 +1,5 @@
+electrophile_type,chemical_notation,count,percentage,route_class,product_linkage,reaction_conditions,mechanism
+Carboxylate,R-COO⁻,25,3.6%,A,amide,Mild coupling (rt-40°C),Direct amide bond formation
+Simple ester,R-COOR,400,57.1%,B,amide,Mild aminolysis (60-80°C),Ester aminolysis with alcohol elimination
+Lactone,Cyclic ester,175,25.0%,C,amide,Elevated temperature aminolysis,Ring-opening ester cleavage
+Oxazolidinone,Cyclic carbamate,100,14.3%,C,urea,Neat amine 80-120°C,Ring-opening carbamate cleavage

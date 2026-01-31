@@ -1,0 +1,4 @@
+route_class,description,electrophile_types,count,percentage,product_linkages,typical_conditions
+A,Native acid coupling,Carboxylates (R-COO⁻),25,3.6%,amide only,Mildest (rt-40°C); coupling reagents
+B,Easy latent (ester aminolysis),"Simple esters (methyl, ethyl, benzyl)",400,57.1%,amide only,Mild (60-80°C); base catalysis
+C,Hard latent (ring-opening),Lactones + Oxazolidinones,275,39.3%,175 amide + 100 urea,Harsh (80-120°C); elevated temperature or neat amine

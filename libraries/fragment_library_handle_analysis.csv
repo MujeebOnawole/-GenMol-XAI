@@ -1,0 +1,7 @@
+pathogen,pathogen_code,library_type,total_fragments,carboxylic_acids,esters,primary_amines,secondary_amines,aldehydes,ketones,terminal_alkynes,total_acid_handles,total_amine_handles,total_carbonyl_handles,pct_with_acids,pct_with_amines,pct_with_carbonyls
+S_aureus,SA,scaffolds,1986,0,0,0,1032,0,0,0,0,1032,0,0.0,52.0,0.0
+S_aureus,SA,substituents,346,40,29,87,72,16,11,4,69,159,27,19.9,46.0,7.8
+E_coli,EC,scaffolds,452,0,0,0,299,0,0,0,0,299,0,0.0,66.2,0.0
+E_coli,EC,substituents,85,8,5,21,11,2,0,5,13,32,2,15.3,37.6,2.4
+C_albicans,CA,scaffolds,1100,0,0,0,423,0,0,0,0,423,0,0.0,38.5,0.0
+C_albicans,CA,substituents,134,7,13,32,24,14,8,0,20,56,22,14.9,41.8,16.4

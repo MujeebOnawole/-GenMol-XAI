@@ -1,0 +1,236 @@
+================================================================================
+REACTION MECHANISM FOR EXEMPLAR COMPOUNDS - EXPLAINED
+================================================================================
+
+This document explains the fragment recombination chemistry used to generate
+the three pathogen-selective exemplar compounds from XAI-identified fragments.
+
+================================================================================
+GENERAL PRINCIPLE: ACYL TRANSFER REACTIONS
+================================================================================
+
+All products are formed via nucleophilic acyl substitution (acyl transfer):
+
+    R-C(=O)-LG  +  H-NR'R"  -->  R-C(=O)-NR'R"  +  LG-H
+
+Where:
+    - R-C(=O)-LG = Acid fragment (with leaving group LG)
+    - H-NR'R" = Amine fragment (nucleophile)
+    - Product = Amide (if R is carbon) or Urea (if R is nitrogen)
+
+REACTION SMIRKS NOTATION:
+    [C:1](=[O:2])[O:3].[N:5;H2,H1;!$(N=[!#6])]>>[C:1](=[O:2])[N:5]
+
+This encodes:
+    - Atom [C:1] = Carbonyl carbon (preserved)
+    - Atom [O:2] = Carbonyl oxygen (preserved)
+    - Atom [O:3] = Leaving group oxygen (displaced)
+    - Atom [N:5] = Amine nitrogen (attacks carbonyl)
+
+================================================================================
+ROUTE CLASSIFICATION
+================================================================================
+
+ROUTE A - Native Acids (mildest conditions)
+    - Substrates: Carboxylic acids, anhydrides
+    - Conditions: Coupling reagents (EDC, HATU), rt to 40°C
+    - Mechanism: Activated ester intermediate
+
+ROUTE B - Latent Esters (mild conditions)
+    - Substrates: Methyl/ethyl esters
+    - Conditions: Base (K2CO3), solvent (MeOH or DMF), 40-60°C
+    - Mechanism: Direct aminolysis
+
+ROUTE C - Cyclic Electrophiles (harsh conditions)
+    - Substrates: Lactones, oxazolidinones (cyclic carbamates)
+    - Conditions: Neat (no solvent), 80-120°C, 12-24h
+    - Mechanism: Ring-opening aminolysis
+
+================================================================================
+EXEMPLAR COMPOUND 1: CMPD_087 (S. aureus-selective)
+================================================================================
+
+TARGET PATHOGEN: Staphylococcus aureus (Gram-positive bacterium)
+PREDICTED ACTIVITY: SA=0.982, EC=0.361, CA=0.199
+TIER: 3 (Scenario A) - High confidence prediction
+
+FRAGMENTS:
+-----------
+Acid Fragment: Oxazolidinone-containing substituent
+    SMILES: CC(=O)NC[C@H]1CN(c2ccc(-c3ccc(C=N)c(O)c3)c(F)c2)C(=O)O1
+    Source: SA_positive_substituents.csv
+    Type: Cyclic carbamate (oxazolidinone)
+    Attribution: 0.1249 (positive, activity-associated)
+
+Amine Fragment: Dioxolane-quinoline scaffold
+    SMILES: CN[C@H]1CO[C@H](CCc2ccnc3ccc(OC)cc23)OC1
+    Source: SA_positive_substituents.csv
+    Type: Secondary amine (2° amine)
+    Attribution: 0.2403 (positive, activity-associated)
+
+REACTION:
+---------
+Route: C (Cyclic electrophile - oxazolidinone ring-opening)
+Conditions: Neat, 100°C, 12-24h
+Product Linkage: UREA bond (N-C(=O)-N)
+
+MECHANISM EXPLANATION:
+----------------------
+1. The oxazolidinone ring contains a cyclic carbamate: -N-C(=O)-O- in a 5-membered ring
+
+2. At elevated temperature (100°C), the secondary amine attacks the carbonyl carbon
+   of the oxazolidinone:
+
+       Oxazolidinone-C(=O)-O  +  CH3-NH-R  -->  Oxazolidinone-C(=O)-NH-R  +  -O-
+
+3. The ring opens, releasing the alkoxide which picks up a proton
+
+4. The product contains a UREA linkage: R1-NH-C(=O)-N(CH3)-R2
+
+WHY "NEAT" CONDITIONS:
+----------------------
+- "Neat" means NO SOLVENT is used
+- The amine fragment is used in EXCESS and serves as both:
+  (a) The nucleophilic reactant
+  (b) The reaction medium (pseudo-solvent)
+- Heat (100°C) provides activation energy for ring opening
+- No coupling reagents, bases, or catalysts are required
+- This is operationally simple and avoids purification of solvents
+
+================================================================================
+EXEMPLAR COMPOUND 2: CMPD_162 (E. coli-selective)
+================================================================================
+
+TARGET PATHOGEN: Escherichia coli (Gram-negative bacterium)
+PREDICTED ACTIVITY: SA=0.271, EC=0.987, CA=0.250
+TIER: 3 (Scenario A) - High confidence prediction
+
+FRAGMENTS:
+-----------
+Acid Fragment: Methylsulfonyl-hydroxamic acid oxazolidinone
+    SMILES: C[C@@](C[C@H]1CNC(=O)O1)(C(=O)NO)S(C)(=O)=O
+    Source: EC_positive_substituents.csv
+    Type: Cyclic carbamate (oxazolidinone)
+    Attribution: 0.2103 (positive, activity-associated)
+
+Amine Fragment: Cyanoethyl-benzimidazole
+    SMILES: Cc1ccc2[nH]c(NCCC#N)nc2n1
+    Source: EC_positive_substituents.csv
+    Type: Secondary amine (2° amine)
+    Attribution: 0.2472 (positive, activity-associated)
+
+REACTION:
+---------
+Route: C (Cyclic electrophile - oxazolidinone ring-opening)
+Conditions: Neat, 100°C, 12-24h
+Product Linkage: UREA bond (N-C(=O)-N)
+
+MECHANISM EXPLANATION:
+----------------------
+Same mechanism as CMPD_087:
+1. Secondary amine (on the benzimidazole) attacks oxazolidinone carbonyl
+2. Ring opens to form linear urea
+3. No solvent needed - neat conditions with excess amine
+
+KEY STRUCTURAL FEATURES:
+------------------------
+- The hydroxamic acid group (C(=O)NO) is preserved - important for metal chelation
+- The methylsulfonyl group is preserved - contributes to polarity
+- The benzimidazole ring system is preserved - key pharmacophore for E. coli activity
+- The cyanoethyl chain provides additional binding interactions
+
+================================================================================
+EXEMPLAR COMPOUND 3: CMPD_428 (C. albicans-selective)
+================================================================================
+
+TARGET PATHOGEN: Candida albicans (Fungus)
+PREDICTED ACTIVITY: SA=0.013, EC=0.044, CA=0.776
+TIER: 3 (Scenario A) - High confidence prediction
+
+FRAGMENTS:
+-----------
+Acid Fragment: Methyl propionate (simple ester)
+    SMILES: CCC(=O)OC
+    Source: SA_CA_positive_substituents.csv
+    Type: Methyl ester (latent acid)
+    Attribution: Not recorded (simple fragment)
+
+Amine Fragment: Diphenylamine-pyridinium scaffold
+    SMILES: c1ccc(Nc2ccncc2)cc1
+    Source: SA_CA_positive_scaffolds.csv
+    Type: Secondary amine (2° amine)
+    Attribution: Not recorded
+
+REACTION:
+---------
+Route: B (Latent ester - direct aminolysis)
+Conditions: K2CO3, MeOH/DMF, 60°C, 6h
+Product Linkage: AMIDE bond (N-C(=O)-C)
+
+MECHANISM EXPLANATION:
+----------------------
+1. K2CO3 (potassium carbonate) acts as a mild base:
+   - Partially deprotonates the amine, increasing nucleophilicity
+   - Neutralizes any acid generated during reaction
+   - Does NOT hydrolyze the ester (too mild)
+
+2. The amine attacks the ester carbonyl:
+
+       CH3CH2-C(=O)-OCH3  +  Ph-NH-Py  -->  CH3CH2-C(=O)-N(Ph)-Py  +  CH3O-
+
+3. Methoxide leaves and picks up a proton (from K2CO3/solvent)
+
+4. Product is a tertiary AMIDE
+
+WHY SOLVENT IS NEEDED (Route B vs Route C):
+-------------------------------------------
+- Methyl esters are LESS reactive than oxazolidinones
+- The ester lacks ring strain that activates oxazolidinones
+- Solvent (MeOH or DMF) is needed to:
+  (a) Dissolve both reactants
+  (b) Facilitate proton transfer
+  (c) Allow lower reaction temperature (60°C vs 100°C)
+
+REAGENT OPTIONS FOR ROUTE B:
+----------------------------
+Any of the following can be used:
+- K2CO3 (potassium carbonate) - mild inorganic base
+- MeOH (methanol) - protic solvent, can assist proton transfer
+- DMF (dimethylformamide) - polar aprotic solvent, good for amide formation
+
+The figure shows "K2CO3, 60°C" as shorthand for typical conditions.
+Full conditions would be: K2CO3, MeOH/DMF (co-solvent), 60°C, 6h
+
+================================================================================
+SUMMARY: PRODUCT LINKAGE TYPES
+================================================================================
+
+AMIDE BOND (N-C(=O)-C):
+-----------------------
+- Formed from: Esters, lactones, carboxylic acids, anhydrides
+- Acid fragment contributes: R-C(=O)- where R is CARBON
+- Found in: CMPD_428 (C. albicans exemplar)
+- Prevalence in dataset: 600/700 molecules (85.7%)
+
+UREA BOND (N-C(=O)-N):
+----------------------
+- Formed from: Oxazolidinones (cyclic carbamates)
+- Acid fragment contributes: R-N-C(=O)- where the carbonyl was in the ring
+- Found in: CMPD_087 (S. aureus), CMPD_162 (E. coli)
+- Prevalence in dataset: 100/700 molecules (14.3%)
+- Note: Ureas are MORE polar than amides (additional H-bond donor/acceptor)
+
+================================================================================
+REFERENCES
+================================================================================
+
+Route C (Oxazolidinone ring-opening):
+- Dyen & Swern, Chem. Rev. 1967, 67, 197-246
+- Sartori et al., Chem. Rev. 2004, 104, 199-250
+
+Route B (Ester aminolysis):
+- Montalbetti & Falque, Tetrahedron 2005, 61, 10827-10852
+
+================================================================================
+END OF DOCUMENT
+================================================================================

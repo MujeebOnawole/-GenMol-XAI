@@ -1,0 +1,5 @@
+reaction_type,reactant_1,reactant_2,product,product_linkage,route_class,count,percentage,conditions
+Amide coupling,Carboxylate (R-COO⁻),Primary/Secondary amine,R₁-CO-NH-R₂,amide,A,25,3.6%,Mild coupling conditions (rt-40°C)
+Ester aminolysis,Simple ester (R-COOR),Primary/Secondary amine,R₁-CO-NH-R₂,amide,B,400,57.1%,Mild aminolysis (60-80°C)
+Lactone aminolysis,Lactone (cyclic ester),Primary/Secondary amine,R₁-CO-NH-R₂,amide,C,175,25.0%,Elevated temperature (100°C+)
+Oxazolidinone ring-opening,Oxazolidinone (cyclic carbamate),Primary/Secondary amine,R₁-NH-CO-NH-R₂,urea,C,100,14.3%,Neat amine (80-120°C)

@@ -1,0 +1,2 @@
+analysis,total_compounds,valid_fps,mean_sim_SA,mean_sim_EC,mean_sim_CA,high_sim_count,amide_count,urea_count
+similarity_to_training,700,700,0.3853559375323414,0.38367831224206966,0.36627946289547725,10,600,100

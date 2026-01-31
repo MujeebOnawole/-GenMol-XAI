@@ -1,0 +1,3 @@
+Source=fragments_analysis/POSITIVE/CA_specific_positive_scaffolds.csv: pre_rows=1100 post_canonical=1100 | acid(native=0, carboxylate=0, latent_ester=0) | amine(primary=0, secondary=423, protonated=0) | roles(scaffold=1100, substituent=0)
+Source=fragments_analysis/POSITIVE/CA_specific_positive_substitutents.csv: pre_rows=134 post_canonical=134 | acid(native=0, carboxylate=0, latent_ester=13) | amine(primary=32, secondary=24, protonated=0) | roles(scaffold=0, substituent=134)
+Wrote 1234 fragments -> FBDD\CA\safe_library.json

@@ -1,0 +1,5 @@
+COMPOUND_ID,pathogen,similarity,generated_smiles,generated_prediction,generated_probability,decision_scenario,matching_training_compound,training_activity,prediction_matches_training
+CMPD_654,SA,1.0,CC(=O)NS(=O)(=O)c1ccccc1,0,0.1342137709259986,A,CHEMBL494783,0,True
+CMPD_654,EC,1.0,CC(=O)NS(=O)(=O)c1ccccc1,0,0.1478203348815441,A,CHEMBL494783,0,True
+CMPD_693,EC,1.0,NNC(=O)CS,0,0.3177485242486,,CHEMBL3890628,0,True
+CMPD_696,EC,1.0,CC(=O)NN,0,0.0530202911235392,,CHEMBL3091859,0,True
